@@ -1,0 +1,12 @@
+Inicio{
+	MOSTRAR "Digite la nota para sabe su calificacion";
+	LEER "VARIABLE": "Nota";
+	CONDICION1 : ¿ES (Nota >= 20 or Nota =19)? { SI ES SI:
+		MOSTRAR "Su nota es A";
+	} SI ES NO : {
+		CONDICION2 :¿ES (Nota = 18 or Nota >=16)? { SI ES SI:
+			MOSTAR "Su nota es B";
+		} SI ES NO : {
+		}
+	}
+Final}
