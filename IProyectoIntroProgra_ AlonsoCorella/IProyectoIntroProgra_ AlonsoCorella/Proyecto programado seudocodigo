@@ -7,7 +7,7 @@ Inicio{
 		CONDICION2 :¿ES (Nota = 18 or Nota >=16)? { SI ES SI:
 			MOSTAR "Su nota es B";
 		} SI ES NO : {
-					CONDICION3 :¿ES (Nota = 15 or Nota >=13)?{ SI ES SI:
+			CONDICION3 :¿ES (Nota = 15 or Nota >=13)?{ SI ES SI:
 				MOSTRAR : "Su nota es C";
 			} SI ES NO : {
 				CONDICION4 :¿ES (Nota = 12 or Nota >=10)?{ SI ES SI:
@@ -15,9 +15,11 @@ Inicio{
 				} SI ES NO : {
 					CONDICION5 :¿ES (Nota = 9 or Nota >=1)? { SI ES SI:
 					MOSTRAR : "Su nota es E";
-					}
-				}
-			}
-		}
-	}
+					} SI ES NO:{
+					MOSTRAR "Nota invalida"
+					}SALIDA CONDICION5
+				}SALIDA CONDICION4
+			}SALIDA CONDICION3
+		}SALIDA CONDICION2
+	} SALIDA CONDICION1
 Final}
