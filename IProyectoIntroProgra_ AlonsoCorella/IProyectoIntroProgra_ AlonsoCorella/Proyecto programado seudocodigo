@@ -1,22 +1,24 @@
 Inicio{
-	MOSTRAR "Digite la nota para sabe su calificacion";
+	MOSTRAR "Digite Nota que que va de 1 al 20 para saber la Calificación";
 	LEER "VARIABLE": "Nota";
-	CONDICION1 : ¿ES (Nota >= 20 or Nota =19)? { SI ES SI:
-		MOSTRAR "Su nota es A";
+	CONDICION1 : ¿ES (Nota<=20 and Nota>=19)? { SI ES SI:
+		MOSTRAR Su Calificación es una A ";
+		MOSTRAR "Felicidades Nota Perfecta"
 	} SI ES NO : {
-		CONDICION2 :¿ES (Nota = 18 or Nota >=16)? { SI ES SI:
+		CONDICION2 :¿ES (Nota<=18 and Nota>=16)? { SI ES SI:
 			MOSTAR "Su nota es B";
 		} SI ES NO : {
-			CONDICION3 :¿ES (Nota = 15 or Nota >=13)?{ SI ES SI:
+			CONDICION3 :¿ES (Nota <=15 and Nota >= 13)?{ SI ES SI:
 				MOSTRAR : "Su nota es C";
 			} SI ES NO : {
-				CONDICION4 :¿ES (Nota = 12 or Nota >=10)?{ SI ES SI:
+				CONDICION4 :¿ES (Nota<=12 and Nota >=10)?{ SI ES SI:
 					MOSTAR : "Su nota es C";
 				} SI ES NO : {
-					CONDICION5 :¿ES (Nota = 9 or Nota >=1)? { SI ES SI:
+					CONDICION5 :¿ES (Nota<=9 and Nota >=1)? { SI ES SI:
 					MOSTRAR : "Su nota es E";
 					} SI ES NO:{
-					MOSTRAR "Nota invalida"
+					MOSTRAR "la Nota ingresada es invalida"
+					MOSTRAR "intente ingresando otra nota que vaya del 1 al 20"
 					}SALIDA CONDICION5
 				}SALIDA CONDICION4
 			}SALIDA CONDICION3
