@@ -1,27 +1,34 @@
 Inicio{
-	MOSTRAR "Digite Nota que que va de 1 al 20 para saber la Calificación";
+	MOSTRAR "Digite una Nota  que este en el rango de 1 al 20 para saber la Calificación respectiva, no se admiten letras ni cantdades mayor a 20 ni menores que 1";
 	LEER "VARIABLE": "Nota";
 	CONDICION1 : ¿ES (Nota<=20 and Nota>=19)? { SI ES SI:
-		MOSTRAR Su Calificación es una A ";
-		MOSTRAR "Felicidades Nota Perfecta"
+		MOSTRAR "Su Calificación es una A ";
+		MOSTRAR "Felicidades Calificación Perfecta";
 	} SI ES NO : {
 		CONDICION2 :¿ES (Nota<=18 and Nota>=16)? { SI ES SI:
-			MOSTAR "Su nota es B";
+			MOSTAR "Su Calificación es una B";
 		} SI ES NO : {
 			CONDICION3 :¿ES (Nota <=15 and Nota >= 13)?{ SI ES SI:
-				MOSTRAR : "Su nota es C";
+				MOSTRAR : "Su Calificación es una C";
 			} SI ES NO : {
 				CONDICION4 :¿ES (Nota<=12 and Nota >=10)?{ SI ES SI:
-					MOSTAR : "Su nota es C";
+					MOSTAR : "Su Calificación es una D";
 				} SI ES NO : {
 					CONDICION5 :¿ES (Nota<=9 and Nota >=1)? { SI ES SI:
-					MOSTRAR : "Su nota es E";
+					MOSTRAR : "Su Calificación es una E";
+					MOSTRAR : "Obtuviste la Calificación minima";
 					} SI ES NO:{
-					MOSTRAR "la Nota ingresada es invalida"
-					MOSTRAR "intente ingresando otra nota que vaya del 1 al 20"
-					}SALIDA CONDICION5
-				}SALIDA CONDICION4
-			}SALIDA CONDICION3
-		}SALIDA CONDICION2
-	} SALIDA CONDICION1
+					MOSTRAR "La Nota ingresada es inválida";
+					MOSTRAR "Intente ingresando otra nota que esté en el rango de 1 al 20";
+					}SALIDA CONDICION5;
+				}SALIDA CONDICION4;
+			}SALIDA CONDICION3;
+		}SALIDA CONDICION2;
+	} SALIDA CONDICION1;
+	 LEER "VARIABLE" : "Nota";
+	 	CICLO :¿SE CUMPLE QUE (Nota<=20 and Nota>=1)? {SI ES NO:
+	 		MOSTRAR "Su Nota a Calificar no se encuentra entre los parámetros por favor digite una nota que este en el rango de 1 al 20";
+	 	} SI ES SI : {
+	 		FIN DE CICLO;
+	 } SALIDA DE CICLO; 
 Final}
